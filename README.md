@@ -1,8 +1,8 @@
 # README
 
-# RIA1_TDD_TRAINING
+# DEVOPS_BDD_TRAINING
 
-RIA1_TDD_TRAINING est un projet permettant re-entraîner les compétences JS en favorisant une approche TDD et OOP.
+DEVOPS_TDD_TRAINING est un projet permettant d'entraîner git-flow et la pratique du BDD.
 
 ## Installation
 
@@ -19,12 +19,8 @@ Note : configuration testée et validée sur l'IDE WebStorm : version 2023.3.2
 * Réaliser un fork via les outils en ligne de github
 * Cloner le dépôt en local
 * Activer Git-flow
-* Ajouter une référence à votre propre dépôt (pour recevoir des mises à jour ou des correctifs)
-* Réaliser une tentative de mise à jour entre la branche develop distante et la votre
 
-* [How to fork on Github](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
-
-Après avoir récupéré le référentiel:
+## Installation
 
 ```
   [INPUT]
@@ -60,7 +56,7 @@ Pour tester tout le projet :
     npm run test
     
     [EXPECTED OUTPUT AT THE END OF THE PROJECT]
-    > ria1_tdd_training@1.0.0 test
+    > devops_tdd_training@1.0.0 test
     > jest
 
     PASS  src/test/cart.test.js
