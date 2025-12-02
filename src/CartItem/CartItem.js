@@ -22,15 +22,15 @@ module.exports = class CartItem {
     }
 
     get articleId() {
-        //TODO Implement this method
+        return this.#articleId;
     }
 
     get name() {
-        //TODO Implement this method
+        return this.#name;
     }
 
     get quantity() {
-        //TODO Implement this method
+        return this.#quantity;
     }
 
     set quantity(value) {
@@ -38,7 +38,7 @@ module.exports = class CartItem {
     }
 
     get price() {
-        //TODO Implement this method
+        return this.#price;
     }
 
     set price(value) {
@@ -51,16 +51,20 @@ module.exports = class CartItem {
     //endregion public methods
 
     //region private methods
-    set #articleId(value) {
-        //TODO Implement this method
+    set articleId(value) {
+        this.#validateArticleId(value);
+        this.#articleId = value;
     }
 
-    set #name(value) {
+    set name(value) {
         //TODO Implement this method
     }
 
     #validateArticleId(articleId) {
-        //TODO Implement this method
+        if (Number.isInteger(articleId) && articleId > 0) {
+            return articleId;
+        }
+        throw new InvalidArticleIdException();
     }
 
     #validateQuantity(quantity) {
