@@ -23,21 +23,26 @@ module.exports = class CartItem {
 
     get articleId() {
         return this.#articleId;
+        return this.#articleId;
     }
 
     get name() {
         return this.#name;
+        return this.#name;
     }
 
     get quantity() {
+        return this.#quantity;
        return this.#quantity;
     }
 
     set quantity(value) {
+        this.#validateQuantity(value);
         this.#quantity = value;
     }
 
     get price() {
+        return this.#price;
         return this.#price;
     }
 
@@ -52,6 +57,7 @@ module.exports = class CartItem {
 
     //region private methods
     set articleId(value) {
+        this.#validateArticleId(value);
         this.#articleId = value;
     }
 
@@ -60,11 +66,16 @@ module.exports = class CartItem {
     }
 
     #validateArticleId(articleId) {
-        //TODO Implement this method
+        if (Number.isInteger(articleId) && articleId > 0) {
+            return articleId;
+        }
+        throw new InvalidArticleIdException();
     }
 
     #validateQuantity(quantity) {
-        //TODO Implement this method
+        if (!Number.isInteger(quantity) || quantity <= 0) {
+            throw new InvalidQuantityException("Quantity must be a positive integer.");
+        }
     }
 
     #validatePrice(price) {
