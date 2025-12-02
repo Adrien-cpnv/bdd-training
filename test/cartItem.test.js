@@ -19,7 +19,7 @@ test('allGetters_NominalCase_Success', () => {
 
     //then
     expect(articleId).toEqual(cartItem.articleId);
-    expect(name).toEqual(cartitem.name);
+    expect(name).toEqual(cartItem.name);
     expect(quantity).toEqual(cartItem.quantity);
     expect(price).toEqual(cartItem.price);
     expect(total).toEqual(cartItem.total);
