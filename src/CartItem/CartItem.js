@@ -22,41 +22,41 @@ module.exports = class CartItem {
     }
 
     get articleId() {
-        //TODO Implement this method
+        return this.#articleId;
     }
 
     get name() {
-        //TODO Implement this method
+        return this.#name;
     }
 
     get quantity() {
-        //TODO Implement this method
+       return this.#quantity;
     }
 
     set quantity(value) {
-        //TODO Implement this method
+        this.#quantity = value;
     }
 
     get price() {
-        //TODO Implement this method
+        return this.#price;
     }
 
     set price(value) {
-        //TODO Implement this method
+        this.#price = value;
     }
 
     get total() {
-        //TODO Implement this method
+        return this.#quantity * this.#price;
     }
     //endregion public methods
 
     //region private methods
-    set #articleId(value) {
-        //TODO Implement this method
+    set articleId(value) {
+        this.#articleId = value;
     }
 
-    set #name(value) {
-        //TODO Implement this method
+    set name(value) {
+        this.#name = value;
     }
 
     #validateArticleId(articleId) {
